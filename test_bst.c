@@ -66,12 +66,12 @@ int main() {
     assert(numberLeaves(n1) == 2);
     printf("test passed\n");
 
-    printf("CTC5: Test nodeDepth normal case\n");
+    printf("CTC5.1: Test nodeDepth normal case\n");
     c = nodeDepth(n1, n2);
     assert(c == 2);
     printf("test passed\n");
 
-    printf("CTC5: Test nodeDepth case when node is not inside root\n");
+    printf("CTC5.2: Test nodeDepth case when node is not inside root\n");
     c = nodeDepth(n1->left, n2);
     assert(c == -1);
     printf("test passed\n");
@@ -87,20 +87,20 @@ int main() {
     assert(numberLeaves(n1) == 1);
     printf("test passed\n");
 
-    printf("CTC8, Test removeNode, 1 right child, remove 4\n");
+    printf("CTC8: Test removeNode, 1 right child, remove 4\n");
     n2 = removeNode(n1, 4);
     assert(n2 == n1);
     assert(n1->right->value == 3);
     printf("test passed\n");
 
-    printf("CTC9, Test removeNode, 1 left child, add 4 remove 3\n");
+    printf("CTC9: Test removeNode, 1 left child, add 4 remove 3\n");
     n3 = addNode(n1, 4);
     n2 = removeNode(n1, 3);
     assert(n2 == n1);
     assert(n1->right->value == 4);
     printf("test passed\n");
 
-    printf("CTC10, Test removeNode, 2 child, add 10, 12, 8, then remove 10\n");
+    printf("CTC10: Test removeNode, 2 child, add 10, 12, 8, then remove 10\n");
     n3 = addNode(n1, 6);
     n3 = addNode(n1, 10);
     n3 = addNode(n1, 12);
@@ -174,13 +174,13 @@ int main() {
     }
 
     if (nodeDepth(a, b) == 1) {
-        printf("PASS: 3 has have depth of 1\n");
+        printf("PASS: 3 has depth of 1\n");
     } else if (nodeDepth(a, b) != 1) {
         printf("FAIL: 3 should have depth of 1\n");
     }
 
     if (nodeDepth(a, k) == 3) {
-        printf("PASS: 15 have depth of 3\n");
+        printf("PASS: 15 has depth of 3\n");
     } else if (nodeDepth(a, k) != 3) {
         printf("FAIL: 15 should have depth of 3\n");
     }
